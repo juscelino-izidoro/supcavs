@@ -23,7 +23,7 @@ spcavs(x, y, minVar=NULL, maxVar=NULL, lambda=NULL, selectionMethod = B2,
   \item{y}{A vector with response variable values. Each element is a sample (paired with the rows of x). This is used in performance test model and is also used, particularly in spcavs, to help in variable selection as a pre filter.}
   \item{minVar}{The minimum number of variables to be removed from the data set.}
   \item{maxVar}{The maximum number of variables to be removed from the data set.}
-  \item{lambda}{The threshold to filter some principal componentes to proceed variable selection.}
+  \item{lambda}{The threshold to filter some principal componentes to proceed variable selection. Higher value removes more variables than lower value.}
   \item{selectionMethod}{The function which must be used to select variables from x. This parameter specify a function that use PCA calculations to return a vector with the name of removed variables (B2 or B4 implemented in this package)}
   \item{supervisionMethod}{(Just for spcavs) The function that would be used to supervise the selection.}
   \item{scoreMethod}{(Just for spcavs) The function that return a vector of each variable with its respective coefficient.}
@@ -36,7 +36,7 @@ spcavs(x, y, minVar=NULL, maxVar=NULL, lambda=NULL, selectionMethod = B2,
 \details{
   An attention is given for "minVar", "maxVar" and "lambda". The user can use "minVar" with "maxVar". The parameter "maxVar" needs to be greater or equal to "minVar". 
   Both minVar and maxVar need to be at least 2 in case of using "spcavs". In case of using "pcavs", minVar and maxVar can be 1.
-  The user can decide to use "lambda", difined as eigenvalues threshold as a parameter for selection. In this case, "minVar" and "maxVar" are leaved NULL and "lambda" receives a number.
+  The user can decide to use "lambda", difined as eigenvalues threshold as a parameter for selection. In this case, "minVar" and "maxVar" are left NULL and "lambda" receives a number.
   Also, when using "lambda", user can specify "minVar". This way, the procedures will use the specified values.
   
   Note, when using "lambda", "maxVar" is NULL. To "spcavs" works, it needs a "maxVar" to do the pre filter (supervision).
@@ -62,28 +62,28 @@ spcavs(x, y, minVar=NULL, maxVar=NULL, lambda=NULL, selectionMethod = B2,
                     
   y = rowSums(x) + rnorm(100);
   
-  pcavs(x, y, 1, 5)
+  print( pcavs(x, y, 1, 5) )
   
-  pcavs(x, y, 1, 5, selectionMethod=B4)
+  print( pcavs(x, y, 1, 5, selectionMethod=B4) )
  
-  pcavs(x, y, lambda=.6)
+  print( pcavs(x, y, lambda=.8) )
   
-  pcavs(x, y, lambda=.6, selectionMethod=B4)
+  print( pcavs(x, y, lambda=.8, selectionMethod=B4) )
   
   library(pcaMethods)
-  pcavs(x, y, 1, 3, pcaMethod='pca', 
-                    pcaParams=(c(method="'ppca'", nPcs=5)))
+  print( pcavs(x, y, 1, 3, pcaMethod='pca', 
+                           pcaParams=(c(method="'ppca'", nPcs=5))) )
   
-  spcavs(x, y, 2, 5)
+  print( spcavs(x, y, 2, 5) )
   
-  spcavs(x, y, 2, 5, selectionMethod=B4)
+  print( spcavs(x, y, 2, 5, selectionMethod=B4) )
  
-  spcavs(x, y, lambda=.6)
+  print( spcavs(x, y, lambda=.8) )
   
-  spcavs(x, y, lambda=.6, selectionMethod=B4)
+  print( spcavs(x, y, lambda=.8, selectionMethod=B4) )
   
-  spcavs(x, y, 2, 5, selectionMethod=B4, supervisionMethod=spearmanCoefficient)
+  print( spcavs(x, y, 2, 5, selectionMethod=B4, supervisionMethod=spearmanCoefficient) )
   
-  spcavs(x, y, 2, 5, pcaMethod='princomp', pcaParams=c(scale=TRUE))
+  print( spcavs(x, y, 2, 5, pcaMethod='princomp', pcaParams=c(scale=TRUE)) )
 
 }

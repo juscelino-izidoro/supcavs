@@ -12,6 +12,6 @@ function(x){
   else if(class(x) == 'acp'){
     return(x$eigen$vectors)
   }
-stop("Erro: Sem Cargas");
+stop("Erro: No loads");
 }
 

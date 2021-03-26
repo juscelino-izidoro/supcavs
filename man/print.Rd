@@ -1,14 +1,14 @@
 \name{print.VarSel}
 \alias{print.VarSel}
 \alias{print.VarSelPerformance}
+\alias{print}
 
 \title{Print objects from SUPCAVS package}
 
 \description{Print two kind of objects: one object obtained from variable selection procedure and the other, obtained from performance test procedure.}
 
 \usage{
-print.VarSel(x, ...)
-print.VarSelPerformance(x, ...)
+print(x, ...)
 }
 
 \arguments{

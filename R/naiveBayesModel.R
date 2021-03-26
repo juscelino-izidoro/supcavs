@@ -1,7 +1,5 @@
 naiveBayesModel <-
 function(x, y, pcaMethod=NULL, pcaParams=NULL){
-  library('e1071')
-  
   t = nrow(x)
   
   train = sample(t, t*.66)
@@ -9,7 +7,7 @@ function(x, y, pcaMethod=NULL, pcaParams=NULL){
   
   disc = factor(as.numeric(y>mean(y)))
       
-  nb = naiveBayes(x[train,], disc[train])
+  nb = e1071::naiveBayes(x[train,], disc[train])
   t = table(predict(nb, x[test,]), disc[test])
   
   resp = sum(diag(t))/sum(t)

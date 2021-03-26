@@ -1,5 +1,10 @@
+plot <-
+function(x, ...){
+  UseMethod("plot");
+}
+
 plot.list <-
-function(x,...){
+function(x, ...){
   par(mfrow=c(1,length(x)), mgp=c(1.2, .4, 0), pin=c(3,2.8), mar=c(2.5,2,1.2,2), cex.main=1.2)
   
   for(obj in x){
@@ -10,5 +15,16 @@ function(x,...){
     plot.default(r, obj_y, cex=.5, xlab="No. of selected variables", ylab="Performance", main=obj$main)
     text(r, obj_y+dh, labels=obj_x)
   }
+}
+
+plot.VarSelPerformance <-
+function(x, ...){
+
+  x_x = c(0,x$x)
+  x_y = c(x$y_0,x$y)
+  r = x$nVars-x_x
+  dh=(max(x_y)-min(x_y))/30
+  plot.default(r, x_y, cex=.5, xlab="No. of selected variables", ylab="Performance", main=x$main)
+  text(r, x_y+dh, labels=x_x)
 }
 

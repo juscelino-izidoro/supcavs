@@ -6,7 +6,7 @@ function(x, y, minVar=NULL, maxVar=NULL, lambda=NULL, selectionMethod=B2, lockVa
   }
   
   if(!is.null(minVar) && (minVar < 1)){
-    stop('When using minVar with maxVar, please, specify a number greater or equal to 1,\n in a way to satisfay (maxVar >= minVar).\nWhen using lambda, minVar can also be leaved NULL.\n');
+    stop('When using minVar with maxVar, please, specify a number greater or equal to 1,\n in a way to satisfay (maxVar >= minVar).\nWhen using lambda, minVar can also be left NULL.\n');
   }
   
   if(!is.null(maxVar) && (maxVar < minVar)){

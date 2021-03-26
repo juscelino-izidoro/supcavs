@@ -12,6 +12,6 @@ function(x){
   else if(class(x) == 'acp'){
     return(x$escores)
   }
-stop("Erro: Sem Scores");
+stop("Erro: No scores");
 }
 
