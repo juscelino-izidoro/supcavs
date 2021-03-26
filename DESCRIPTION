@@ -5,10 +5,10 @@ Version: 1.2
 Date: 2021-03-26
 Author: MSc. Juscelino Izidoro de Oliveira Jr., PhD. Jose Carlos Ferreira da Rocha and PhD. Adriel Ferreira da Fonseca
 Maintainer: MSc. Juscelino Izidoro de Oliveira Jr. <juscelino.jr@gmail.com>
-Description: Framework for variable selection study, based on PCA and Supervised PCA.
+Description: Framework for variable selection study, based on Unsupervised PCA and Supervised PCA methods.
 License: GPL (>=3)
 Depends: R (>= 2.13)
 Suggests: pcaMethods (>= 1.14.0), RSNNS (>= 0.4.2), e1071 (>= 1.6)
-URL: https://github.com/juscelino-jr/supcavs
+URL: https://tede2.uepg.br/jspui/handle/prefix/152, https://doi.org/10.5335/rbca.2015.3727, https://github.com/juscelino-jr/supcavs
 LazyLoad: no
 Encoding: latin1
