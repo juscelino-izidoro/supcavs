@@ -2,13 +2,13 @@ Package: supcavs
 Type: Package
 Title: Supervised and Unsupervised PCA Variable Selection
 Version: 1.2
-Date: 2013-07-05
-Author: MSc. Juscelino Izidoro de Oliveira Jr., PhD. José Carlos Ferreira da Rocha and PhD. Adriel Ferreira da Fonseca
+Date: 2021-03-26
+Author: MSc. Juscelino Izidoro de Oliveira Jr., PhD. Jose Carlos Ferreira da Rocha and PhD. Adriel Ferreira da Fonseca
 Maintainer: MSc. Juscelino Izidoro de Oliveira Jr. <juscelino.jr@gmail.com>
-Description: This package provide two ways of using some PCA criterion for variable selection.
+Description: Framework for variable selection study, based on PCA and Supervised PCA.
 License: GPL (>=3)
 Depends: R (>= 2.13)
 Suggests: pcaMethods (>= 1.14.0), RSNNS (>= 0.4.2), e1071 (>= 1.6)
-URL: https://github.com/juscelino-izidoro/supcavs
+URL: https://github.com/juscelino-jr/supcavs
 LazyLoad: no
 Encoding: latin1
