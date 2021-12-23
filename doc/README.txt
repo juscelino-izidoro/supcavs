@@ -1,0 +1,1 @@
+Open the diagram "ComponentsDiagram.xmi" with the Umbrello Modeller (version >= 2.14.3).

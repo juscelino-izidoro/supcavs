@@ -3,5 +3,6 @@
 supcavsenv <- function(){ as.environment('.supcavsEnv'); }
 
 print.supcavsenv <- function(){
-  print("<environment: quantmodEnv>")
+  print("<environment: supcavsEnv>")
 }
+
